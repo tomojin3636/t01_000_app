@@ -18,12 +18,12 @@ export default {
       {
         name: 'SERVICE',
         icon: 'mdi-send',
-        url: '#'
+        url: '/service'
       },
       {
         name: 'BLOG',
         icon: 'mdi-send',
-        url: '#'
+        url: '/blog'
       },
       {
         name: 'ACCESS',

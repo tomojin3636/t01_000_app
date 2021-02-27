@@ -44,7 +44,9 @@
 
           <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
           <v-app-bar-title>Tomojin</v-app-bar-title>
-          <v-tabs >
+          <v-tabs 
+            centered
+          >
               <v-tab
                 v-for="(menuItem, index) in menuItems"
                 :key="index"
@@ -54,17 +56,7 @@
               </v-tab>
             </v-tabs>
 
-          <v-btn icon>
-            <v-icon>mdi-magnify</v-icon>
-          </v-btn>
-
-          <v-btn icon>
-            <v-icon>mdi-heart</v-icon>
-          </v-btn>
-
-          <v-btn icon>
-            <v-icon>mdi-dots-vertical</v-icon>
-          </v-btn>
+          
         
         </v-app-bar>
       
