@@ -72,31 +72,34 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
 import constants from '@/common/constants'
 
-export default Vue.extend({
-  name: 'Header',
+export default {
+ 
+ 
  
   data: () => ({
       drawer: false,
       group: null,
       menuItems: constants.menuItems
     }),
-});
+};
 </script>
-<style lang="css" scoped>
+<style>
+
     .v-app-bar-title__content {
-        overflow: visible;
+        overflow: visible !important;
+        margin-right: 50px !important;
     }
-
+    
 </style>
-
 <style lang="scss" scoped>
 
-
-
     @import "@/styles/common/global.scss";
+    .v-app-bar-title__content {
+        overflow: visible !important;
+        margin-right: 50px !important;
+    }
     .v-app-bar__nav-icon {
       @include display_pc {
           display: none !important;
@@ -104,7 +107,8 @@ export default Vue.extend({
     }
 
     .v-tabs {
-    display: none;
+      display: none;
+
       @include display_pc {
           display: block !important;
       }

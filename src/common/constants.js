@@ -11,9 +11,9 @@ export default {
         url: '/timeline'
       },
       {
-        name: 'WORK',
+        name: 'Skill',
         icon: 'mdi-send',
-        url: '/aboud'
+        url: '/skill'
       },
       {
         name: 'SERVICE',

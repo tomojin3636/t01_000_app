@@ -1,55 +1,61 @@
 <template>
-  <v-timeline
-    align-top
-    :dense="$vuetify.breakpoint.smAndDown"
-  >
+  <v-timeline>
     <v-timeline-item
-      v-for="(item, i) in items"
+      v-for="(year, i) in years"
       :key="i"
-      :color="item.color"
-      :icon="item.icon"
-      fill-dot
+      :color="year.color"
+      small
     >
-      <v-card
-        :color="item.color"
-        dark
-      >
-        <v-card-title class="title">
-          Lorem Ipsum Dolor
-        </v-card-title>
-        <v-card-text class="white text--primary">
-          <p>Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.</p>
-          <v-btn
-            :color="item.color"
-            class="mx-0"
-            outlined
-          >
-            Button
-          </v-btn>
-        </v-card-text>
-      </v-card>
+      <template v-slot:opposite>
+        <span
+          :class="`headline font-weight-bold ${year.color}--text`"
+          v-text="year.year"
+        ></span>
+      </template>
+      <div class="py-4">
+        <h2 :class="`headline font-weight-light mb-4 ${year.color}--text`">
+          {{year.title}}
+        </h2>
+        <div>
+          Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.
+        </div>
+      </div>
     </v-timeline-item>
   </v-timeline>
 </template>
 <script>
   export default {
     data: () => ({
-      items: [
+      years: [
         {
-          color: 'red lighten-2',
-          icon: 'mdi-star',
+          color: 'cyan',
+          year: '2015/3',
+          title: '大学卒業',
+          note:  ''
         },
         {
-          color: 'purple darken-1',
-          icon: 'mdi-book-variant',
+          color: 'green',
+          year: '2015/4',
+          title: '現職入社',
+          note:  ''
         },
         {
-          color: 'green lighten-1',
-          icon: 'mdi-airballoon',
+          color: 'pink',
+          year: '2016/6～2016/11',
+          title: 'パッケージのVersionUpを担当',
+          note:  ''
         },
         {
-          color: 'indigo',
-          icon: 'mdi-buffer',
+          color: 'amber',
+          year: '2016/12～2018/3',
+          title: 'awsを使用した小規模システムを開発',
+          note:  ''
+        },
+        {
+          color: 'orange',
+          year: '2020/10～現在',
+          title: '新システム開発中',
+          note:  ''
         },
       ],
     }),
