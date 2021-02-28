@@ -29,10 +29,6 @@
     margin: auto;
 }
 
-.infotext{
 
-    
-
-}
 
 </style>

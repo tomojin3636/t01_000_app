@@ -27,3 +27,7 @@ npm run test:e2e
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### サーバーサイドを用意して動的になったら完成とする
+Java または C#を用いる予定

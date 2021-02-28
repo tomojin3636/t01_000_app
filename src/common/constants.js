@@ -24,11 +24,6 @@ export default {
         name: 'BLOG',
         icon: 'mdi-send',
         url: '/blog'
-      },
-      {
-        name: 'ACCESS',
-        icon: 'mdi-send',
-        url: '#'
       }
     ]
   }
